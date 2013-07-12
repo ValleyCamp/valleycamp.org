@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Valley Camp - <%= @item[:title] %></title>
+    <link rel="stylesheet" href="/style.css">
+
+    <!-- keep this for stats -->
+    <meta name="generator" content="nanoc <%= Nanoc::VERSION %>">
+
+    <!-- Kickstart -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="/css/kickstart.css" media="all" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/kickstart.js"></script>
+  </head>
+  <body>
+    <div class="grid">
+      <div class="col_3" id="sidebar">
+        <h2>Explore</h2>
+        <i class="icon-signal"></i>Find out about our facilities and location.
+        <ul>
+          <li><a href="/explore/teneriffelodge">Teneriffe Lodge</a></li>
+          <li><a href="/explore/meadowviewcabin">Meadow View Cabin</a></li>
+          <li><a href="/explore/picnicshelter">Ceader Grove Picnic Shelter</a></li>
+          <li><a href="/explore/roundhouse">The Roundhouse</a></li>
+          <li><a href="/explore/rvarea">Upper Meadow RV Campground</a></li>
+          <li><a href="/explore/lowercampground">Lower Meadow Campground</a></li>
+          <li><a href="/gallery">Photo Gallery</a></li>
+          <li><a href="/explore/area">Surrounding Area</a></li>
+          <li>RATE SHEET PDF</li>
+        </ul>
+        <h2>Experience</h2>
+        Learn more about what we have to offer.
+        <ul>
+          <li><a href="/page/history">Camp History</a></li>
+          <li><a href="/page/mission">Mission Statement</a></li>
+          <!-- TODO: capture old links: page/basicinfo and page/profile -->
+          <li><a href="/page/planning">Retreat Planning</a></li>
+          <!-- TODO: capture old links: page/eastbounddirections and page/westbounddirections -->
+          <li><a href="/page/directions">Directions to Camp</a></li>
+          <li><a href="/page/links">Other Links</a></li>
+        </ul>
+        <h2>Engage</h2>
+        Contact us and get involved!
+        <ul>
+          <li><a href="/page/contact">Contact Us</a></li>
+          <!-- TODO: capture old links: page/recentdonations -->
+          <li><a href="/page/wishlist">Donate (Wishlist)</a></li>
+          <li><a href="/page/camp_host_program">Camp Host Program</a></li>
+          <li><a href="/page/coming_events">Coming Events</a></li>
+          <li><a href="page/service_projects">Service Projects</a></li>
+        </ul>
+      </div>
+      <div class="col_9" id="main">
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+</html>
