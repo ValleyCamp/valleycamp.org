@@ -4,7 +4,7 @@ title: Teneriffe Lodge
 
 Teneriffe Lodge is our facility for group retreats, or small gatherings. The Lodge sleeps 24 in bunk beds, Complete kitchen, Fully covered deck, Large lawn for games.
 
-#Description
+###Description
 Teneriffe Lodge is available for weekend, weekday and day use year-round.
 
 It sleeps 24 in bunk beds, one room sleeps 14 and the other room sleeps 10. You will need to bring sleeping bags, pillows, & personal toiletries. The mattresses have bottom sheets only.
@@ -13,6 +13,6 @@ The living room has DVD player with large 42" monitor; bring your movies or rent
 
 The large deck is covered and lit. It has tables, chairs and a BBQ. The BBQ takes up to 25 of charcoal for cooking for large groups. There is a large lawn for tents, games and other group activities.
 
-#Rates
+###Rates
 
-#Reservations
+###Reservations

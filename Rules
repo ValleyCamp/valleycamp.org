@@ -21,16 +21,19 @@ compile '/assets/*' do
   # Nothing
 end
 
-compile '/explore/*' do
-  filter :kramdown
-  layout 'default'
-end
-
 compile '*' do
   if item.binary?
     # don’t filter binary items
   else
-    filter :erb
+    case item[:extension]
+      when 'md'
+        filter :kramdown
+      when 'haml'
+        filter :haml
+      when 'erb'
+        filter :erb
+    end
+
     layout 'default'
   end
 end
