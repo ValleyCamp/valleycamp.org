@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Valley Camp - <%= @item[:title] %></title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style.css">
 
     <!-- keep this for stats -->
     <meta name="generator" content="nanoc <%= Nanoc::VERSION %>">
@@ -15,8 +15,9 @@
     <script type="text/javascript" src="/js/kickstart.js"></script>
   </head>
   <body>
-    <div class="grid">
-      <div class="col_3" id="sidebar">
+    <div class="grid clearfix" id="main_container">
+      <div class="col_12" id="navbar">
+        <img id="logo" src="<%= layout_path("Logo.png") %>" />
         <h2>Explore</h2>
         <i class="icon-signal"></i>Find out about our facilities and location.
         <ul>
@@ -49,13 +50,14 @@
           <li><a href="/page/wishlist">Donate (Wishlist)</a></li>
           <li><a href="/page/camp_host_program">Camp Host Program</a></li>
           <li><a href="/page/coming_events">Coming Events</a></li>
-          <li><a href="page/service_projects">Service Projects</a></li>
+          <li><a href="/page/service_projects">Service Projects</a></li>
         </ul>
       </div>
-      <div class="col_9" id="main">
+      <div class="col_12" id="main">
         <h1 id="page_header"><%= @item[:title] %></h1>
         <%= yield %>
       </div>
+      <div class=clear"></div>
     </div>
   </body>
 </html>

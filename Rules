@@ -13,13 +13,13 @@
 #   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 #   because “*” matches zero or more characters.
 
-compile '/stylesheet/' do
-  # don’t filter or layout
+compile '/stylesheet/*' do
+  filter :sass
 end
 
-compile '/assets/*' do
+# compile '/assets/*' do
   # Nothing
-end
+# end
 
 compile '*' do
   if item.binary?
@@ -34,7 +34,8 @@ compile '*' do
         filter :erb
     end
 
-    layout 'default'
+    #layout 'default'
+    layout 'leviticus'
   end
 end
 
@@ -42,10 +43,16 @@ route '/stylesheet/' do
   '/style.css'
 end
 
+route "/static/images/*/" do
+  "/images/" + File.basename(item.identifier)
+end
+
 route '/assets/*' do
-  # If it's a kickstart file kick it up to the root css/js folders
+ # If it's a kickstart file kick it up to the root css/js folders
   if item.identifier.chop =~ /assets\/kickstart/
     item.identifier.chop.sub!("/assets/kickstart", "")
+  else
+    item.identifier.chop
   end
 end
 

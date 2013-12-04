@@ -1,2 +1,30 @@
+@function layout_img($fn)
+  @return url('/assets/layouts/leviticus/#{$fn}')
+
 body
-  background: url('<%= layout_path("BackgroundColor.jpg") %>')
+  background-image: layout_img("BackgroundColor.jpg")
+  margin: 0px
+  padding: 0px
+
+#main_container
+  padding: 0px
+  width: 980px
+  background-color: #ffffff
+  border: 10px solid transparent
+  border-image: layout_img("container_borders.png") 1 10 1 10 / 10px
+  //-webkit-border-image: layout_img("container_borders.png") 1 10 1 10 / 10px
+  //-moz-border-image: layout_img("container_borders.png") 1 10 1 10 / 10px
+  border-width: 10px
+  border-top-width: 0px
+
+  div
+    background-color: #ffffff
+
+  #navbar
+    margin: 0px
+    padding: 0px
+
+    #logo
+      //position: relative
+      //top: 1px
+      //left: -10px
