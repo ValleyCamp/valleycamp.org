@@ -13,6 +13,13 @@
     <link rel="stylesheet" type="text/css" href="/css/kickstart.css" media="all" />
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="/js/kickstart.js"></script>
+    <script type="text/javascript">
+      // Force the container to always be at least as tall as the window
+      $(document).ready(function(){
+        windowHeight = $(window).height();
+        $('#main_container').css('min-height', windowHeight);
+      });
+    </script>
   </head>
   <body>
     <div class="grid clearfix" id="main_container">
