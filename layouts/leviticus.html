@@ -14,8 +14,8 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="/js/kickstart.js"></script>
     <script type="text/javascript">
-      // Force the container to always be at least as tall as the window
       $(document).ready(function(){
+        // Force the container to always be at least as tall as the window
         windowHeight = $(window).height();
         $('#main_container').css('min-height', windowHeight);
       });
@@ -24,7 +24,7 @@
   <body>
     <div class="grid clearfix" id="main_container">
       <div class="col_3" id="logo">
-        <img id="logo" src="<%= layout_path("Logo.png") %>" />
+        <a href="/"><img id="logo" src="<%= layout_path("Logo.png") %>" /></a>
       </div>
       <div class="col_9" id="navbar">
         <ul class="menu">
