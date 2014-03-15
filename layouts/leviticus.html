@@ -19,6 +19,19 @@
         windowHeight = $(window).height();
         $('#main_container').css('min-height', windowHeight);
       });
+
+      /*
+       * Accept a string name of a nav menu section, and ensure that (as long
+       * that section exists) the section is the one and only visible (activated)
+       * nav section.
+       */
+      function nav_activate(p_sectionName) {
+        var section = $('#nav_detailed_'+p_sectionName);
+        if(section) {
+          $(".nav_detailed").removeClass("nav_active").addClass("nav_inactive");
+          section.addClass("nav_active");
+        }
+      }
     </script>
   </head>
   <body>
@@ -28,17 +41,18 @@
       </div>
       <div class="col_2" id="nav_toplevel">
         <ul>
-          <li id="explore_btn">Explore</li>
-          <li id="experience_btn">Experience</li>
-          <li id="engage_btn">Engage</li>
+          <!-- TODO: Remove NBSPs for proper alignment -->
+          <li id="explore_btn" onClick="nav_activate('explore');">Explore</li>
+          <li id="experience_btn" onClick="nav_activate('experience');">&nbsp;&nbsp;Experience</li>
+          <li id="engage_btn" onClick="nav_activate('engage');">&nbsp;&nbsp;&nbsp;&nbsp;Engage</li>
         </ul>
       </div>
       <div class="col_1" id="nav_mustache">
-        <div id="mustache_image">M</div>
+        <div id="mustache_image">}</div>
       </div>
       <div class="col_6" id="nav_detailed_container">
 
-        <div class="nav_detailed_active" id="nav_detailed_welcome">
+        <div class="nav_detailed nav_active" id="nav_detailed_welcome">
           <ul>
             <li id="explore_btn">our facilities and area</li>
             <li id="experience_btn">what we have to offer</li>
@@ -46,21 +60,28 @@
           </ul>
         </div>
 
-        <div class="nav_detailed" id="nav_detailed_explore">
-          <ul>
-            <li><a href="/explore/teneriffelodge">Teneriffe Lodge</a></li>
-            <li><a href="/explore/meadowviewcabin">Meadow View Cabin</a></li>
-            <li><a href="/explore/picnicshelter">Cedar Grove Picnic Shelter</a></li>
-            <li><a href="/explore/roundhouse">The Roundhouse</a></li>
-            <li><a href="/explore/rvarea">Upper Meadow RV Camping</a></li>
-            <li><a href="/explore/lowercampground">Lower Meadow Campground</a></li>
-            <li><a href="/gallery">Photo Gallery</a></li>
-            <li><a href="/explore/area">Surrounding Area</a></li>
-            <li><a href="/files/rate_sheet_2014.pdf">Rate Sheet</a></li>
-          </ul>
+        <div class="nav_detailed nav_inactive" id="nav_detailed_explore">
+          <div class="col_6">
+            <ul>
+              <li><a href="/explore/teneriffelodge">Teneriffe Lodge</a></li>
+              <li><a href="/explore/meadowviewcabin">Meadow View Cabin</a></li>
+              <li><a href="/explore/picnicshelter">Cedar Grove Picnic Shelter</a></li>
+              <li><a href="/explore/roundhouse">The Roundhouse</a></li>
+            </ul>
+          </div>
+          <div class="col_6">
+            <ul>
+              <li><a href="/explore/rvarea">Upper Meadow RV Camping</a></li>
+              <li><a href="/explore/lowercampground">Lower Meadow Campground</a></li>
+              <li><a href="/gallery">Photo Gallery</a></li>
+              <li><a href="/explore/area">Surrounding Area</a></li>
+              <li><a href="/files/rate_sheet_2014.pdf">Rate Sheet</a></li>
+            </ul>
+          </div>
         </div>
 
-        <div class="nav_detailed" id="nav_detailed_experience">
+        <div class="nav_detailed nav_inactive" id="nav_detailed_experience">
+          <div class="col_12">
             <ul>
               <li><a href="/page/history">Camp History</a></li>
               <li><a href="/page/mission">Mission Statement</a></li>
@@ -70,17 +91,20 @@
               <li><a href="/page/directions">Directions to Camp</a></li>
               <li><a href="/page/links">Other Links</a></li>
             </ul>
+          </div>
         </div>
 
-        <div class="nav_detailed" id="nav_detailed_engage">
-          <ul>
-            <li><a href="/page/contact">Contact Us</a></li>
-            <!-- TODO: capture old links: page/recentdonations -->
-            <li><a href="/page/wishlist">Donate (Wishlist)</a></li>
-            <li><a href="/page/camp_host_program">Camp Host Program</a></li>
-            <li><a href="/page/coming_events">Coming Events</a></li>
-            <li><a href="/page/service_projects">Service Projects</a></li>
-          </ul>
+        <div class="nav_detailed nav_inactive" id="nav_detailed_engage">
+          <div class="col_12">
+            <ul>
+              <li><a href="/page/contact">Contact Us</a></li>
+              <!-- TODO: capture old links: page/recentdonations -->
+              <li><a href="/page/wishlist">Donate (Wishlist)</a></li>
+              <li><a href="/page/camp_host_program">Camp Host Program</a></li>
+              <li><a href="/page/coming_events">Coming Events</a></li>
+              <li><a href="/page/service_projects">Service Projects</a></li>
+            </ul>
+          </div>
         </div>
       </div>
 
