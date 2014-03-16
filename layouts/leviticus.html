@@ -28,6 +28,7 @@
       function nav_activate(p_sectionName) {
         var section = $('#nav_detailed_'+p_sectionName);
         if(section) {
+          $("#nav_mustache_image").text("}");
           $(".nav_detailed").removeClass("nav_active").addClass("nav_inactive");
           section.addClass("nav_active");
         }
@@ -48,15 +49,15 @@
         </ul>
       </div>
       <div class="col_1" id="nav_mustache">
-        <div id="mustache_image">}</div>
+        <div id="nav_mustache_image">&nbsp;</div>
       </div>
       <div class="col_6" id="nav_detailed_container">
 
         <div class="nav_detailed nav_active" id="nav_detailed_welcome">
           <ul>
-            <li id="explore_btn">our facilities and area</li>
-            <li id="experience_btn">what we have to offer</li>
-            <li id="engage_btn">get involved, lend a hand</li>
+            <li id="explore_btn">our facilities and area...</li>
+            <li id="experience_btn">what we have to offer...</li>
+            <li id="engage_btn">get involved, lend a hand...</li>
           </ul>
         </div>
 
