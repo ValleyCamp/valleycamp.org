@@ -15,6 +15,8 @@
     <script type="text/javascript" src="/js/kickstart.js"></script>
     <script type="text/javascript">
       $(document).ready(function(){
+        var foundMenu = false;
+
         // Force the container to always be at least as tall as the window
         windowHeight = $(window).height();
         $('#main_container').css('min-height', windowHeight);
@@ -24,12 +26,21 @@
           var n = $(this);
           n.find("a").each(function(i,e) {
             if(e.pathname+"/" == window.location.pathname) { // Add the "/" so all path URLs comply with legacy paths
+              foundMenu = true;
               $(this).css('color', '#321b05');
               var secName = n[0].id.split("_").slice().pop();
               nav_activate(secName);
+              $(".nav_btn").removeClass("btn_active").addClass("btn_inactive");
+              $("#"+secName+"_btn").removeClass("btn_inactive").addClass("btn_active");
             }
           });
         });
+
+        // Assuming we haven't found a menu yet, we'll make sure the default is set.
+        if(foundMenu == false) {
+          $("#nav_detailed_welcome").removeClass("nav_inactive").addClass("nav_active");
+          $(".nav_btn").addClass("btn_inactive");
+        }
       });
 
       /*
@@ -40,9 +51,11 @@
       function nav_activate(p_sectionName) {
         var section = $('#nav_detailed_'+p_sectionName);
         if(section) {
+          $(".nav_btn").removeClass("btn_active").addClass("btn_inactive");
+          $("#"+p_sectionName+"_btn").removeClass("btn_inactive").addClass("btn_active");
           $("#nav_mustache_image").text("}");
           $(".nav_detailed").removeClass("nav_active").addClass("nav_inactive");
-          section.addClass("nav_active");
+          section.removeClass("nav_inactive").addClass("nav_active");
         }
       }
     </script>
@@ -55,9 +68,9 @@
       <div class="col_2" id="nav_toplevel">
         <ul>
           <!-- TODO: Remove NBSPs for proper alignment -->
-          <li id="explore_btn" onClick="nav_activate('explore');">Explore</li>
-          <li id="experience_btn" onClick="nav_activate('experience');">&nbsp;&nbsp;Experience</li>
-          <li id="engage_btn" onClick="nav_activate('engage');">&nbsp;&nbsp;&nbsp;&nbsp;Engage</li>
+          <li id="explore_btn" class="nav_btn" onClick="nav_activate('explore');">Explore</li>
+          <li id="experience_btn" class="nav_btn" onClick="nav_activate('experience');">&nbsp;&nbsp;Experience</li>
+          <li id="engage_btn" class="nav_btn" onClick="nav_activate('engage');">&nbsp;&nbsp;&nbsp;&nbsp;Engage</li>
         </ul>
       </div>
       <div class="col_1" id="nav_mustache">
@@ -65,7 +78,7 @@
       </div>
       <div class="col_6" id="nav_detailed_container">
 
-        <div class="nav_detailed nav_active" id="nav_detailed_welcome">
+        <div class="nav_detailed" id="nav_detailed_welcome">
           <ul>
             <li id="explore_btn">our facilities and area...</li>
             <li id="experience_btn">what we have to offer...</li>
