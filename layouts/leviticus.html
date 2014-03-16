@@ -18,6 +18,18 @@
         // Force the container to always be at least as tall as the window
         windowHeight = $(window).height();
         $('#main_container').css('min-height', windowHeight);
+
+        // Make sure the correct menu is active
+        $('.nav_detailed').each(function() {
+          var n = $(this);
+          n.find("a").each(function(i,e) {
+            if(e.pathname+"/" == window.location.pathname) { // Add the "/" so all path URLs comply with legacy paths
+              $(this).css('color', '#321b05');
+              var secName = n[0].id.split("_").slice().pop();
+              nav_activate(secName);
+            }
+          });
+        });
       });
 
       /*
