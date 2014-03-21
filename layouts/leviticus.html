@@ -178,7 +178,9 @@
       -->
 
       <div class="col_12" id="main">
+        <% if @item[:title] %>
         <h1 id="page_header" class="header center"><span><%= @item[:title] %></span></h1>
+        <% end %>
         <%= yield %>
       </div>
       <div class=clear"></div>
