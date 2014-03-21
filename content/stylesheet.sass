@@ -1,3 +1,10 @@
+$c_pa: #3A5824
+$c_re: #C4AB6B
+$c_ci: #8C7146
+$c_vo: #371B05
+$c_mu: #517C72
+$fonts: LeagueGothic, Helvetica, Verdana, sans-serif
+
 @function layout_img($fn)
   @return url('/assets/layouts/leviticus/#{$fn}')
 
@@ -48,19 +55,20 @@ body
       list-style: none
 
       li
-        font: 400 43px/1.5 LeagueGothic, Helvetica, Verdana, sans-serif
+        font: 400 43px/1.5 $fonts
 
       .btn_inactive
-        color: #c4ab6b // TODO: These need to be variables
+        color: $c_ci
       .btn_active
-        color: #321b05
+        color: $c_vo
 
       li:hover
-        color: #371b05
+        cursor: pointer
+        color: $c_vo
 
   #nav_mustache
     #nav_mustache_image
-      font: 400 186px/1.5 LeagueGothic, Helvetica, Verdana, sans-serif
+      font: 400 186px/1.5 $fonts
       margin-top: -36px
       font-weight: bold
       color: #cccccc
@@ -73,17 +81,17 @@ body
       padding-top: 19px
 
       li
-        color: #c4ab6b
-        font: 400 24px/1.5 LeagueGothic, Helvetica, Verdana, sans-serif
+        color: $c_re
+        font: 400 24px/1.5 $fonts
         margin: 0px
         padding: 0px
 
         a:hover
-          color: #371b05
+          color: $c_vo
 
         a
           text-decoration: none
-          color: #c4ab6b
+          color: $c_re
 
 
     #nav_detailed_welcome
@@ -91,7 +99,7 @@ body
         li
           margin-top: 21px
           margin-left: -20px
-          font: 400 18px/1.5 LeagueGothic, Helvetica, Verdana, sans-serif
+          font: 400 18px/1.5 $fonts
           font-style: italic
           color: #cccccc
 
@@ -100,3 +108,45 @@ body
 
     .nav_active
       display: block
+
+.header
+  color: $c_mu
+  font: 400 34px/1.5 $fonts
+  span
+    padding-right: 15px
+    padding-left: 15px
+    border-bottom: solid 1px black
+
+.small
+  font-size: 12pt
+
+.italic
+  font-style: italic
+
+// Figure out how to de-dupe this without BREAKING CSS's FRAIL LITTLE SPINE
+.fpn
+  padding-bottom: 15px
+  padding-top: 15px
+  .fpn_header_right
+    float: right
+    border-left: solid 2px #cccccc
+    padding: 2px
+    padding-bottom: 10px
+    padding-left: 10px
+    margin-left: 10px
+  .fpn_header_left
+    float: left
+    border-right: solid 2px #cccccc
+    padding: 2px
+    padding-bottom: 10px
+    padding-right: 10px
+    margin-right: 10px
+
+  .t_postedby
+    color: $c_mu
+  .author
+    color: $c_ci
+  .date
+    color: #cccccc
+
+  .fpn_content
