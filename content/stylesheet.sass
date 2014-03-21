@@ -3,7 +3,7 @@ $c_re: #C4AB6B
 $c_ci: #8C7146
 $c_vo: #371B05
 $c_mu: #517C72
-$fonts: LeagueGothic, Helvetica, Verdana, sans-serif
+$header_fonts: LeagueGothic, Helvetica, Verdana, sans-serif
 
 @function layout_img($fn)
   @return url('/assets/layouts/leviticus/#{$fn}')
@@ -55,7 +55,7 @@ body
       list-style: none
 
       li
-        font: 400 43px/1.5 $fonts
+        font: 400 43px/1.5 $header_fonts
 
       .btn_inactive
         color: $c_ci
@@ -68,7 +68,7 @@ body
 
   #nav_mustache
     #nav_mustache_image
-      font: 400 186px/1.5 $fonts
+      font: 400 186px/1.5 $header_fonts
       margin-top: -36px
       font-weight: bold
       color: #cccccc
@@ -82,7 +82,7 @@ body
 
       li
         color: $c_re
-        font: 400 24px/1.5 $fonts
+        font: 400 24px/1.5 $header_fonts
         margin: 0px
         padding: 0px
 
@@ -99,7 +99,7 @@ body
         li
           margin-top: 21px
           margin-left: -20px
-          font: 400 18px/1.5 $fonts
+          font: 400 18px/1.5 $header_fonts
           font-style: italic
           color: #cccccc
 
@@ -111,7 +111,16 @@ body
 
 .header
   color: $c_mu
-  font: 400 34px/1.5 $fonts
+  font: 400 46px/1.5 $header_fonts
+  span
+    padding-right: 15px
+    padding-left: 15px
+    border-bottom: solid 1px black
+
+.subhead
+  color: $c_mu
+  font: 400 20px/1.5 $header_fonts
+  padding-top: 20px
   span
     padding-right: 15px
     padding-left: 15px

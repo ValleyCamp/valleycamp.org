@@ -89,6 +89,7 @@
         <div class="nav_detailed nav_inactive" id="nav_detailed_explore">
           <div class="col_6">
             <ul>
+              <li><a href="/gallery">Photo Gallery</a></li>
               <li><a href="/explore/teneriffelodge">Teneriffe Lodge</a></li>
               <li><a href="/explore/meadowviewcabin">Meadow View Cabin</a></li>
               <li><a href="/explore/picnicshelter">Cedar Grove Picnic Shelter</a></li>
@@ -99,9 +100,9 @@
             <ul>
               <li><a href="/explore/rvarea">Upper Meadow RV Camping</a></li>
               <li><a href="/explore/lowercampground">Lower Meadow Campground</a></li>
-              <li><a href="/gallery">Photo Gallery</a></li>
               <li><a href="/explore/area">Surrounding Area</a></li>
               <li><a href="/files/rate_sheet_2014.pdf">Rate Sheet</a></li>
+              <li><a href="/page/directions">Directions to Camp</a></li>
             </ul>
           </div>
         </div>
@@ -114,7 +115,6 @@
               <!-- TODO: capture old links: page/basicinfo and page/profile -->
               <li><a href="/page/planning">Retreat Planning</a></li>
               <!-- TODO: capture old links: page/eastbounddirections and page/westbounddirections -->
-              <li><a href="/page/directions">Directions to Camp</a></li>
               <li><a href="/page/links">Other Links</a></li>
             </ul>
           </div>
@@ -123,7 +123,9 @@
         <div class="nav_detailed nav_inactive" id="nav_detailed_engage">
           <div class="col_12">
             <ul>
-              <li><a href="/page/contact">Contact Us</a></li>
+              <!-- TODO: capture old links: page/contact-->
+              <!-- TODO: Don't have two links to the same page, bad SEO! -->
+              <li><a href="/page/directions">Contact Us</a></li>
               <!-- TODO: capture old links: page/recentdonations -->
               <li><a href="/page/wishlist">Donate (Wishlist)</a></li>
               <li><a href="/page/camp_host_program">Camp Host Program</a></li>
@@ -176,7 +178,7 @@
       -->
 
       <div class="col_12" id="main">
-        <h1 id="page_header"><%= @item[:title] %></h1>
+        <h1 id="page_header" class="header center"><span><%= @item[:title] %></span></h1>
         <%= yield %>
       </div>
       <div class=clear"></div>
