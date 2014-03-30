@@ -89,11 +89,12 @@
         <div class="nav_detailed nav_inactive" id="nav_detailed_explore">
           <div class="col_6">
             <ul>
-              <li><a href="/gallery">Photo Gallery</a></li>
               <li><a href="/explore/teneriffelodge">Teneriffe Lodge</a></li>
               <li><a href="/explore/meadowviewcabin">Meadow View Cabin</a></li>
               <li><a href="/explore/picnicshelter">Cedar Grove Picnic Shelter</a></li>
               <li><a href="/explore/roundhouse">The Roundhouse</a></li>
+              <!-- TODO: Capture old gallery link. -->
+              <li><a href="/explore/community">Community Areas</a></li>
             </ul>
           </div>
           <div class="col_6">
@@ -102,7 +103,6 @@
               <li><a href="/explore/lowercampground">Lower Meadow Campground</a></li>
               <li><a href="/explore/area">Surrounding Area</a></li>
               <li><a href="/files/rate_sheet_2014.pdf">Rate Sheet</a></li>
-              <li><a href="/page/directions">Directions to Camp</a></li>
             </ul>
           </div>
         </div>
@@ -121,11 +121,10 @@
         </div>
 
         <div class="nav_detailed nav_inactive" id="nav_detailed_engage">
-          <div class="col_12">
+          <div class="col_6">
             <ul>
               <!-- TODO: capture old links: page/contact-->
-              <!-- TODO: Don't have two links to the same page, bad SEO! -->
-              <li><a href="/page/directions">Contact Us</a></li>
+              <li><a href="/page/directions">Contact Us or Get Directions</a></li>
               <!-- TODO: capture old links: page/recentdonations -->
               <li><a href="/page/wishlist">Donate (Wishlist)</a></li>
               <li><a href="/page/camp_host_program">Camp Host Program</a></li>
@@ -136,50 +135,15 @@
         </div>
       </div>
 
-
-      <!-- 
-      <div class="col_9" id="navbar">
-        <ul class="menu">
-          <li><a href="">Explore</a>
-            <ul>
-              <li><a href="/explore/teneriffelodge">Teneriffe Lodge</a></li>
-              <li><a href="/explore/meadowviewcabin">Meadow View Cabin</a></li>
-              <li><a href="/explore/picnicshelter">Ceader Grove Picnic Shelter</a></li>
-              <li><a href="/explore/roundhouse">The Roundhouse</a></li>
-              <li><a href="/explore/rvarea">Upper Meadow RV Campground</a></li>
-              <li><a href="/explore/lowercampground">Lower Meadow Campground</a></li>
-              <li><a href="/gallery">Photo Gallery</a></li>
-              <li><a href="/explore/area">Surrounding Area</a></li>
-              <li><a href="/files/rate_sheet_2014.pdf">RATE SHEET PDF</a></li>
-            </ul>
-          </li>
-          <li><a href="">Experience</a>
-            <ul>
-              <li><a href="/page/history">Camp History</a></li>
-              <li><a href="/page/mission">Mission Statement</a></li>
-              <!-- TODO: capture old links: page/basicinfo and page/profile -- >
-              <li><a href="/page/planning">Retreat Planning</a></li>
-              <!-- TODO: capture old links: page/eastbounddirections and page/westbounddirections -- >
-              <li><a href="/page/directions">Directions to Camp</a></li>
-              <li><a href="/page/links">Other Links</a></li>
-            </ul>
-          </li>
-          <li><a href="">Engage</a>
-            <ul>
-              <li><a href="/page/contact">Contact Us</a></li>
-              <!-- TODO: capture old links: page/recentdonations -- >
-              <li><a href="/page/wishlist">Donate (Wishlist)</a></li>
-              <li><a href="/page/camp_host_program">Camp Host Program</a></li>
-              <li><a href="/page/coming_events">Coming Events</a></li>
-              <li><a href="/page/service_projects">Service Projects</a></li>
-            </ul>
-          </li>
+      <div class="col_12 right social_bar">
+        <a href="http://facebook.com/valleycamp"><i class="icon-facebook">&nbsp;</i></a>
+        <i class="icon-envelope-alt"></i><a href="mailto:info@valleycamp.org">info@valleycamp.org</a>
+        <i class="icon-phone"></i> 425-888-1852
       </div>
-      -->
 
       <div class="col_12" id="main">
         <% if @item[:title] %>
-        <h1 id="page_header" class="header center"><span><%= @item[:title] %></span></h1>
+        <div id="page_header" class="header center"><span><%= @item[:title] %></span></div>
         <% end %>
         <%= yield %>
       </div>
