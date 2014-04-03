@@ -1,8 +1,8 @@
-$c_pa: #3A5824
-$c_re: #C4AB6B
-$c_ci: #8C7146
-$c_vo: #371B05
-$c_mu: #517C72
+$c_ever: #3A5824 // Ever (green)
+$c_silt: #C4AB6B // Silt (tan)
+$c_blur: #8C7146 // Rhetorical Blur (brown)
+$c_rich: #371B05 // Rich (dark brown)
+$c_egg: #517C72 // Egg (light green)
 $header_fonts: LeagueGothic, Helvetica, Verdana, sans-serif
 
 @function layout_img($fn)
@@ -37,6 +37,7 @@ body
   //-moz-border-image: layout_img("container_borders.png") 1 10 1 10 / 10px
   border-width: 10px
   border-top-width: 0px
+  border-bottom-width: 0px
 
   div
     background-color: #ffffff
@@ -58,13 +59,13 @@ body
         font: 400 43px/1.5 $header_fonts
 
       .btn_inactive
-        color: $c_ci
+        color: $c_blur
       .btn_active
-        color: $c_vo
+        color: $c_rich
 
       li:hover
         cursor: pointer
-        color: $c_vo
+        color: $c_rich
 
   #nav_mustache
     #nav_mustache_image
@@ -81,17 +82,17 @@ body
       padding-top: 19px
 
       li
-        color: $c_re
+        color: $c_silt
         font: 400 24px/1.5 $header_fonts
         margin: 0px
         padding: 0px
 
         a:hover
-          color: $c_vo
+          color: $c_rich
 
         a
           text-decoration: none
-          color: $c_re
+          color: $c_silt
 
 
     #nav_detailed_welcome
@@ -119,7 +120,7 @@ body
   margin-bottom: 0px !important
   a
     text-decoration: none
-    color: $c_mu
+    color: $c_egg
   i
     margin-left: 20px
     margin-right: 5px
@@ -128,7 +129,7 @@ body
 .header
   padding-top: 5px
   margin-top: 0px
-  color: $c_mu
+  color: $c_ever
   font: 400 46px/1.5 $header_fonts
   span
     padding-right: 15px
@@ -136,7 +137,7 @@ body
     border-bottom: solid 1px black
 
 .subhead
-  color: $c_mu
+  color: $c_egg
   font: 400 20px/1.5 $header_fonts
   padding-top: 20px
   span
@@ -173,8 +174,20 @@ body
     margin-right: 10px
 
   .t_postedby
-    color: $c_mu
+    color: $c_egg
   .author
-    color: $c_ci
+    color: $c_blur
   .date
     color: #cccccc
+
+#footer
+  width: 100%
+  margin-left: 0px
+  margin-right: 0px
+  margin-bottom: 0px
+  margin-top: 30px
+  padding: 10px
+  background-color: $c_rich !important
+  div
+    background-color: $c_rich !important
+    color: #ffffff
