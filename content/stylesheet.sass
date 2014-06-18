@@ -22,6 +22,51 @@ $header_fonts: LeagueGothic, Helvetica, Verdana, sans-serif
   font-weight: normal
   font-style: normal
 
+
+
+// ---------------------------------
+//  Use the responsive sizes from the kicktstart files to do some custom stuff
+//  Responsive Grid Media Queries - 1280, 1024, 768, 480
+//  1280-1024 - desktop (default grid)
+//  1024-768  - tablet landscape
+//  768-480   - tablet 
+//  480-less  - phone landscape & smaller
+// ---------------------------------
+
+@media all and (min-width: 1024px) and (max-width: 1280px)
+  body
+    color: green
+
+@media all and (min-width: 768px) and (max-width: 1024px)
+  body
+    color: blue
+    font-size: 12px
+
+@media all and (min-width: 480px) and (max-width: 768px)
+  body
+    color: yellow
+    font-size: 12px
+  #logo
+    a
+      img
+        width: 50% !important
+  #nav_mustache
+    display: none
+
+@media all and (max-width: 480px)
+  body
+    color: red
+    font-size: 10px
+  #logo
+    a
+      img
+        width: 40% !important
+  #nav_mustache
+    display: none
+
+/*------------- END RESPONSIVE SIZES SECTION -------------*/
+
+
 body
   background-image: layout_img("BackgroundColor.jpg")
   margin: 0px
@@ -45,6 +90,9 @@ body
   #logo
     padding: 0px
     margin: 0px
+    a
+      img
+        width: 100%
 
   #navbar
     margin: 0px
@@ -56,7 +104,7 @@ body
       list-style: none
 
       li
-        font: 400 43px/1.5 $header_fonts
+        font: 400 2.8em/1.5 $header_fonts
 
       .btn_inactive
         color: $c_blur
@@ -69,8 +117,8 @@ body
 
   #nav_mustache
     #nav_mustache_image
-      font: 400 186px/1.5 $header_fonts
-      margin-top: -36px
+      font: 400 12.3em/1.05 $header_fonts
+      /* margin-top: -36px */
       font-weight: bold
       color: #cccccc
 
@@ -83,7 +131,7 @@ body
 
       li
         color: $c_silt
-        font: 400 24px/1.5 $header_fonts
+        font: 400 1.5em/1.5 $header_fonts
         margin: 0px
         padding: 0px
 
@@ -99,12 +147,12 @@ body
       ul
         padding-top: 0px
         li
-          margin-left: -100px
+          margin-left: -3.5em
           span
-            height: 74px
+            height: 3.5em
             display: table-cell
             vertical-align: middle
-            font: 400 15px/1.5 Georgia, serif
+            font: 400 0.9em/1.5 Georgia, serif
             font-style: italic
             color: #aaaaaa
 
@@ -116,7 +164,7 @@ body
 
 .social_bar
   font-size: 10pt
-  margin-top: -35px !important
+  margin-top: -1.37em !important
   margin-bottom: 0px !important
   a
     text-decoration: none
