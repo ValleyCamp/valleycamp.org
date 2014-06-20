@@ -34,34 +34,46 @@ $header_fonts: LeagueGothic, Helvetica, Verdana, sans-serif
 // ---------------------------------
 
 @media all and (min-width: 1024px) and (max-width: 1280px)
-  body
-    color: green
+  #nav_phonebox
+    display: none
+
 
 @media all and (min-width: 768px) and (max-width: 1024px)
   body
-    color: blue
     font-size: 12px
+  #nav_phonebox
+    display: none
 
 @media all and (min-width: 480px) and (max-width: 768px)
   body
-    color: yellow
     font-size: 12px
   #logo
     a
       img
         width: 50% !important
+  #nav_phonebox
+    display: block
   #nav_mustache
+    display: none
+  #nav_toplevel
+    display: none
+  #nav_detailed_container
     display: none
 
 @media all and (max-width: 480px)
   body
-    color: red
     font-size: 10px
   #logo
     a
       img
         width: 40% !important
+  #nav_phonebox
+    display: block
   #nav_mustache
+    display: none
+  #nav_toplevel
+    display: none
+  #nav_detailed_container
     display: none
 
 /*------------- END RESPONSIVE SIZES SECTION -------------*/
