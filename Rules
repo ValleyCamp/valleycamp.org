@@ -56,6 +56,10 @@ route '/assets/*' do
   end
 end
 
+route '/gallery_temp' do
+  '/gallery/index.html'
+end
+
 route '/htaccess' do
   '/.htaccess'
 end
