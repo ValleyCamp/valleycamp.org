@@ -1,1 +1,1 @@
-ErrorDocument /error/notfound/
+ErrorDocument /error/notfound/index.html
