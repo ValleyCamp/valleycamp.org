@@ -1,1 +1,8 @@
 ErrorDocument /error/notfound/index.html
+
+# Capture some of the URL's from the old site and redirect appropriately.
+Redirect /page/eastbounddirections /page/directions
+Redirect /page/westbounddirections /page/directions
+Redirect /page/contact /page/directions
+Redirect /page/profile /
+Redirect /page/basicinfo /
