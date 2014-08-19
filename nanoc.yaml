@@ -85,3 +85,7 @@ deploy:
     kind: rsync
     dst: "valleycamp.org:~/valleycamp.org_testing"
     #options: [ '-gpPrtvz', '--delete-after' ] # delete existing files on server
+  production:
+    kind: rsync
+    dst: "valleycamp.org:~/valleycamp.org_production"
+    #options: [ '-gpPrtvz', '--delete-after' ] # delete existing files on server
