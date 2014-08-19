@@ -17,6 +17,10 @@ compile '/stylesheet/*' do
   filter :sass
 end
 
+compile '/htaccess' do
+  # Do nothing to it, it's a plain text file!
+end
+
 # compile '/assets/*' do
   # Nothing
 # end
