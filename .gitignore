@@ -3,3 +3,4 @@ output/*
 tmp/*
 Gemfile.lock
 .sass-cache/
+.ruby-version
