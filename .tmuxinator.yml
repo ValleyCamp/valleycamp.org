@@ -6,5 +6,5 @@ windows:
       layout: b7ac,149x39,0,0[149x26,0,0{74x26,0,0,3,74x26,75,0,6},149x12,0,27,5]
       panes:
         - bundle exec guard
-        - bundle exec nanoc view
+        - bundle exec nanoc view -p 3086
   - vim: vim
