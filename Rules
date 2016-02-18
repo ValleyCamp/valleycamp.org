@@ -51,6 +51,10 @@ route "/static/images/*/" do
   "/images/" + File.basename(item.identifier)
 end
 
+route "/assets/favicon/*" do
+  "/" + File.basename(item.identifier)
+end
+
 route '/assets/*' do
  # If it's a kickstart file kick it up to the root css/js folders
   if item.identifier.chop =~ /assets\/kickstart/
