@@ -13,6 +13,20 @@
 #   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 #   because “*” matches zero or more characters.
 
+compile '/robots' do
+  filter :haml
+end
+route '/robots' do
+  '/robots.txt'
+end
+
+compile '/sitemap' do
+  filter :haml
+end
+route '/sitemap' do
+  '/sitemap.xml'
+end
+
 compile '/stylesheet/*' do
   filter :sass
 end

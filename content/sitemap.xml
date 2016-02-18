@@ -1,0 +1,5 @@
+---
+is_hidden: true
+---
+
+= xml_sitemap(items: sitemap_items)
