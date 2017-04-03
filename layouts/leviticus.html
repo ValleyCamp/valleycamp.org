@@ -81,45 +81,45 @@
   <body>
     <div class="grid clearfix" id="main_container">
       <div class="col_3" id="logo">
-        <a href="/"><img id="logo" src="<%= layout_path("Logo.png") %>" /></a>
+        <a href="/" onclick="javascript:_paq.push(['trackEvent', 'Menu', 'ClickedLogo'])"><img id="logo" src="<%= layout_path("Logo.png") %>" /></a>
       </div>
       <div class="col_1" id="nav_phonebox">
         <div id="page_header" class="header center"><span>Navigation</span></div>
         <ul class="tabs center">
-          <li><a href="#tab_explore">Explore</a></li>
-          <li><a href="#tab_experience">Experience</a></li>
-          <li><a href="#tab_engage">Engage</a></li>
+          <li><a href="#tab_explore" onclick="javascript:_paq.push(['trackEvent', 'MobileMenu', 'ActivateSection', 'Explore'])">Explore</a></li>
+          <li><a href="#tab_experience" onclick="javascript:_paq.push(['trackEvent', 'MobileMenu', 'ActivateSection', 'Experience'])">Experience</a></li>
+          <li><a href="#tab_engage" onclick="javascript:_paq.push(['trackEvent', 'MobileMenu', 'ActivateSection', 'Engage'])">Engage</a></li>
         </ul>
 
         <div id="tab_explore" class="tab-content">
           <ul>
-            <li><a href="/explore/teneriffelodge">Teneriffe Lodge</a></li>
-            <li><a href="/explore/meadowviewcabin">Meadow View Cabin</a></li>
-            <li><a href="/explore/roundhouse">The Roundhouse</a></li>
-            <li><a href="/explore/community">Community Areas</a></li>
-            <li><a href="/explore/picnicshelter">Cedar Grove Picnic Shelter</a></li>
-            <li><a href="/explore/rvarea">Upper Meadow RV Camping</a></li>
-            <li><a href="/explore/lowercampground">Lower Meadow Campground</a></li>
-            <li><a href="/explore/area">Surrounding Area</a></li>
+            <li><a href="/explore/teneriffelodge" onclick="javascript:_paq.push(['trackEvent', 'MobileMenu', 'Navigate', 'explore:teneriffelodge'])">Teneriffe Lodge</a></li>
+            <li><a href="/explore/meadowviewcabin" onclick="javascript:_paq.push(['trackEvent', 'MobileMenu', 'Navigate', 'explore:meadowviewcabin'])">Meadow View Cabin</a></li>
+            <li><a href="/explore/roundhouse" onclick="javascript:_paq.push(['trackEvent', 'MobileMenu', 'Navigate', 'explore:roundhouse'])">The Roundhouse</a></li>
+            <li><a href="/explore/community" onclick="javascript:_paq.push(['trackEvent', 'MobileMenu', 'Navigate', 'explore:community'])">Community Areas</a></li>
+            <li><a href="/explore/picnicshelter" onclick="javascript:_paq.push(['trackEvent', 'MobileMenu', 'Navigate', 'explore:picnicshelter'])">Cedar Grove Picnic Shelter</a></li>
+            <li><a href="/explore/rvarea" onclick="javascript:_paq.push(['trackEvent', 'MobileMenu', 'Navigate', 'explore:rvarea'])">Upper Meadow RV Camping</a></li>
+            <li><a href="/explore/lowercampground" onclick="javascript:_paq.push(['trackEvent', 'MobileMenu', 'Navigate', 'explore:lowercampground'])">Lower Meadow Campground</a></li>
+            <li><a href="/explore/area" onclick="javascript:_paq.push(['trackEvent', 'MobileMenu', 'Navigate', 'explore:area'])">Surrounding Area</a></li>
           </ul>
         </div>
         <div id="tab_experience" class="tab-content">
           <ul>
-            <li><a href="/page/mission">Mission Statement</a></li>
-            <li><a href="/page/planning">Retreat Planning</a></li>
+            <li><a href="/page/mission" onclick="javascript:_paq.push(['trackEvent', 'MobileMenu', 'Navigate', 'page:mission'])">Mission Statement</a></li>
+            <li><a href="/page/planning" onclick="javascript:_paq.push(['trackEvent', 'MobileMenu', 'Navigate', 'page:planning'])">Retreat Planning</a></li>
             <!-- Hidden for now... <li><a href="/page/history">Camp History</a></li> -->
-            <li><a href="/page/camping_etiquette">Camping Etiquette</a></li>
-            <li><a href="/page/links">Other Links</a></li>
+            <li><a href="/page/camping_etiquette" onclick="javascript:_paq.push(['trackEvent', 'MobileMenu', 'Navigate', 'page:camping_etiquette'])">Camping Etiquette</a></li>
+            <li><a href="/page/links" onclick="javascript:_paq.push(['trackEvent', 'MobileMenu', 'Navigate', 'page:links'])">Other Links</a></li>
           </ul>
         </div>
         <div id="tab_engage" class="tab-content">
           <ul>
-            <li><a href="/page/directions">Contact Us or Get Directions</a></li>
-            <li><a href="/page/donate">Donate</a></li>
-            <li><a href="/page/wishlist">Wishlist</a></li>
-            <li><a href="/page/camp_host_program">Camp Host Program</a></li>
-            <li><a href="/page/coming_events">Coming Events</a></li>
-            <li><a href="/page/service_projects">Service Projects</a></li>
+            <li><a href="/page/directions" onclick="javascript:_paq.push(['trackEvent', 'MobileMenu', 'Navigate', 'page:directions'])">Contact Us or Get Directions</a></li>
+            <li><a href="/page/donate" onclick="javascript:_paq.push(['trackEvent', 'MobileMenu', 'Navigate', 'page:donate'])">Donate</a></li>
+            <li><a href="/page/wishlist" onclick="javascript:_paq.push(['trackEvent', 'MobileMenu', 'Navigate', 'page:wishlist'])">Wishlist</a></li>
+            <li><a href="/page/camp_host_program" onclick="javascript:_paq.push(['trackEvent', 'MobileMenu', 'Navigate', 'page:camp_host_program'])">Camp Host Program</a></li>
+            <li><a href="/page/coming_events" onclick="javascript:_paq.push(['trackEvent', 'MobileMenu', 'Navigate', 'page:coming_events'])">Coming Events</a></li>
+            <li><a href="/page/service_projects" onclick="javascript:_paq.push(['trackEvent', 'MobileMenu', 'Navigate', 'page:service_projects'])">Service Projects</a></li>
             <!-- Hidden for now <li><a href="/page/team">Our Staff and Board</a></li> -->
           </ul>
         </div>
@@ -127,9 +127,9 @@
       <div class="col_2" id="nav_toplevel">
         <ul>
           <!-- TODO: Remove NBSPs for proper alignment -->
-          <li id="explore_btn" class="nav_btn btn_inactive" onClick="nav_activate('explore');">Explore</li>
-          <li id="experience_btn" class="nav_btn btn_inactive" onClick="nav_activate('experience');">&nbsp;&nbsp;Experience</li>
-          <li id="engage_btn" class="nav_btn btn_inactive" onClick="nav_activate('engage');">&nbsp;&nbsp;&nbsp;&nbsp;Engage</li>
+          <li id="explore_btn" class="nav_btn btn_inactive" onClick="nav_activate('explore');_paq.push(['trackEvent', 'Menu', 'ActivateSection', 'Explore']);">Explore</li>
+          <li id="experience_btn" class="nav_btn btn_inactive" onClick="nav_activate('experience');_paq.push(['trackEvent', 'Menu', 'ActivateSection', 'Experience']);">&nbsp;&nbsp;Experience</li>
+          <li id="engage_btn" class="nav_btn btn_inactive" onClick="nav_activate('engage');_paq.push(['trackEvent', 'Menu', 'ActivateSection', 'Engage']);">&nbsp;&nbsp;&nbsp;&nbsp;Engage</li>
         </ul>
       </div>
       <div class="col_1" id="nav_mustache">
@@ -148,18 +148,18 @@
         <div class="nav_detailed nav_inactive" id="nav_detailed_explore">
           <div class="col_6">
             <ul>
-              <li><a href="/explore/teneriffelodge">Teneriffe Lodge</a></li>
-              <li><a href="/explore/meadowviewcabin">Meadow View Cabin</a></li>
-              <li><a href="/explore/roundhouse">The Roundhouse</a></li>
-              <li><a href="/explore/community">Community Areas</a></li>
+              <li><a href="/explore/teneriffelodge" onclick="javascript:_paq.push(['trackEvent', 'Menu', 'Navigate', 'explore:teneriffelodge'])">Teneriffe Lodge</a></li>
+              <li><a href="/explore/meadowviewcabin" onclick="javascript:_paq.push(['trackEvent', 'Menu', 'Navigate', 'explore:meadowviewcabin'])">Meadow View Cabin</a></li>
+              <li><a href="/explore/roundhouse" onclick="javascript:_paq.push(['trackEvent', 'Menu', 'Navigate', 'explore:roundhouse'])">The Roundhouse</a></li>
+              <li><a href="/explore/community" onclick="javascript:_paq.push(['trackEvent', 'Menu', 'Navigate', 'explore:community'])">Community Areas</a></li>
             </ul>
           </div>
           <div class="col_6">
             <ul>
-              <li><a href="/explore/picnicshelter">Cedar Grove Picnic Shelter</a></li>
-              <li><a href="/explore/rvarea">Upper Meadow RV Camping</a></li>
-              <li><a href="/explore/lowercampground">Lower Meadow Campground</a></li>
-              <li><a href="/explore/area">Surrounding Area</a></li>
+              <li><a href="/explore/picnicshelter" onclick="javascript:_paq.push(['trackEvent', 'Menu', 'Navigate', 'explore:picnicshelter'])">Cedar Grove Picnic Shelter</a></li>
+              <li><a href="/explore/rvarea" onclick="javascript:_paq.push(['trackEvent', 'Menu', 'Navigate', 'explore:rvarea'])">Upper Meadow RV Camping</a></li>
+              <li><a href="/explore/lowercampground" onclick="javascript:_paq.push(['trackEvent', 'Menu', 'Navigate', 'explore:lowercampground'])">Lower Meadow Campground</a></li>
+              <li><a href="/explore/area" onclick="javascript:_paq.push(['trackEvent', 'Menu', 'Navigate', 'explore:area'])">Surrounding Area</a></li>
             </ul>
           </div>
         </div>
@@ -167,15 +167,15 @@
         <div class="nav_detailed nav_inactive" id="nav_detailed_experience">
           <div class="col_6">
             <ul>
-              <li><a href="/page/mission">Mission Statement</a></li>
-              <li><a href="/page/planning">Retreat Planning</a></li>
+              <li><a href="/page/mission" onclick="javascript:_paq.push(['trackEvent', 'Menu', 'Navigate', 'page:mission'])">Mission Statement</a></li>
+              <li><a href="/page/planning" onclick="javascript:_paq.push(['trackEvent', 'Menu', 'Navigate', 'page:mission'])">Retreat Planning</a></li>
               <!-- Hidden for now <li><a href="/page/history">Camp History</a></li> -->
             </ul>
           </div>
           <div class="col_6">
             <ul>
-              <li><a href="/page/camping_etiquette">Camping Etiquette</a></li>
-              <li><a href="/page/links">Other Links</a></li>
+              <li><a href="/page/camping_etiquette" onclick="javascript:_paq.push(['trackEvent', 'Menu', 'Navigate', 'page:camping_etiquette'])">Camping Etiquette</a></li>
+              <li><a href="/page/links" onclick="javascript:_paq.push(['trackEvent', 'Menu', 'Navigate', 'page:links'])">Other Links</a></li>
             </ul>
           </div>
         </div>
@@ -183,16 +183,16 @@
         <div class="nav_detailed nav_inactive" id="nav_detailed_engage">
           <div class="col_6">
             <ul>
-              <li><a href="/page/directions">Contact Us or Get Directions</a></li>
-              <li><a href="/page/donate">Donate</a></li>
-              <li><a href="/page/wishlist">Wishlist</a></li>
-              <li><a href="/page/camp_host_program">Camp Host Program</a></li>
-              <li><a href="/page/coming_events">Coming Events</a></li>
+              <li><a href="/page/directions" onclick="javascript:_paq.push(['trackEvent', 'Menu', 'Navigate', 'page:directions'])">Contact Us or Get Directions</a></li>
+              <li><a href="/page/donate" onclick="javascript:_paq.push(['trackEvent', 'Menu', 'Navigate', 'page:donate'])">Donate</a></li>
+              <li><a href="/page/wishlist" onclick="javascript:_paq.push(['trackEvent', 'Menu', 'Navigate', 'page:wishlist'])">Wishlist</a></li>
+              <li><a href="/page/camp_host_program" onclick="javascript:_paq.push(['trackEvent', 'Menu', 'Navigate', 'page:camp_host_program'])">Camp Host Program</a></li>
+              <li><a href="/page/coming_events" onclick="javascript:_paq.push(['trackEvent', 'Menu', 'Navigate', 'page:coming_events'])">Coming Events</a></li>
             </ul>
           </div>
           <div class="col_6">
             <ul>
-              <li><a href="/page/service_projects">Service Projects</a></li>
+              <li><a href="/page/service_projects" onclick="javascript:_paq.push(['trackEvent', 'Menu', 'Navigate', 'page:service_projects'])">Service Projects</a></li>
               <!-- Hidden for now <li><a href="/page/team">Our Staff and Board</a></li> -->
             </ul>
           </div>
@@ -200,11 +200,11 @@
       </div>
 
       <div class="col_12 right social_bar">
-        <a href="http://twitter.com/valleycamp" target="_blank"><i class="icon-twitter">&nbsp;</i></a>
-        <a href="http://facebook.com/valleycamp"><i class="icon-facebook">&nbsp;</i></a>
-        <a href="mailto:info@valleycamp.org" target="_blank"><i class="icon-envelope-alt"></i>info@valleycamp.org</a>
+        <a href="http://twitter.com/valleycamp" onclick="javascript:_paq.push(['trackEvent', 'SocialMenu', 'ClickOutlink', 'twitter'])" target="_blank"><i class="icon-twitter">&nbsp;</i></a>
+        <a href="http://facebook.com/valleycamp" onclick="javascript:_paq.push(['trackEvent', 'SocialMenu', 'ClickOutlink', 'facebook'])"><i class="icon-facebook">&nbsp;</i></a>
+        <a href="mailto:info@valleycamp.org" onclick="javascript:_paq.push(['trackEvent', 'SocialMenu', 'ClickMailto', 'info'])" target="_blank"><i class="icon-envelope-alt"></i>info@valleycamp.org</a>
         <i class="icon-phone"></i> 425-888-1852
-        <a href="/page/directions"><i class="icon-map-marker"></i>Find Us</a>
+        <a href="/page/directions" onclick="javascript:_paq.push(['trackEvent', 'SocialMenu', 'Navigate', 'page:directions'])"><i class="icon-map-marker"></i>Find Us</a>
       </div>
 
       <div class="col_12" id="main">
@@ -217,16 +217,16 @@
       <div class="col_12" id="footer">
         <div class="col_12 center">
           Valley Camp is 100% funded by your donations, and every dollar counts. Help us make a difference.<br />
-          View our <a href="/page/donate">Donation page</a> for more details, or choose one of the methods below:
+          View our <a href="/page/donate" onclick="javascript:_paq.push(['trackEvent', 'Footer', 'Navigate', 'page:donate'])">Donation page</a> for more details, or choose one of the methods below:
         </div>
         <div class="col_3 donateBtn center">
-          <a href="https://smile.amazon.com/ch/46-0487934" target="_blank"><img src="/assets/images/amazonSmile.png" alt="Amazon Smile: You Buy Amazon Gives"></a>
+          <a href="https://smile.amazon.com/ch/46-0487934" onclick="javascript:_paq.push(['trackEvent', 'Footer', 'ClickOutlink', 'amazon_smile'])" target="_blank"><img src="/assets/images/amazonSmile.png" alt="Amazon Smile: You Buy Amazon Gives"></a>
         </div>
         <div class="donateBtn col_2 center">
-          <a class="coinbase-button" data-code="7d40a2660b1f3c089a9d8ddb9abba2d1" data-button-style="donation_small" data-custom="FOOTER_DONATION" href="https://www.coinbase.com/checkouts/7d40a2660b1f3c089a9d8ddb9abba2d1">Donate Bitcoins</a><script src="https://www.coinbase.com/assets/button.js" type="text/javascript"></script>
+          <a class="coinbase-button" data-code="7d40a2660b1f3c089a9d8ddb9abba2d1" data-button-style="donation_small" data-custom="FOOTER_DONATION" href="https://www.coinbase.com/checkouts/7d40a2660b1f3c089a9d8ddb9abba2d1" onclick="javascript:_paq.push(['trackEvent', 'Footer', 'ClickOutlink', 'coinbase'])">Donate Bitcoins</a><script src="https://www.coinbase.com/assets/button.js" type="text/javascript"></script>
         </div>
         <div class="donateBtn col_2 center">
-          <a href="https://cash.me/valleycamp/" target="_blank"><img src="/assets/images/donate_square_footer.png" /></a>
+          <a href="https://cash.me/valleycamp/" onclick="javascript:_paq.push(['trackEvent', 'Footer', 'ClickOutlink', 'square_cash'])" target="_blank"><img src="/assets/images/donate_square_footer.png" /></a>
         </div>
         <div class="donateBtn col_2 center">
           <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="blank">
@@ -237,7 +237,7 @@
           </form>
         </div>
         <div class="col_3 donateBtn center">
-          <a href="https://www.thrivent.com/thriventchoice/program/dollars_details/" target="_blank"><img src="/assets/layouts/leviticus/thrivent_choice.png" alt="Thrivent choice donation logo" /></a>
+          <a href="https://www.thrivent.com/thriventchoice/program/dollars_details/" onclick="javascript:_paq.push(['trackEvent', 'Footer', 'ClickOutlink', 'thrivent_choice'])" target="_blank"><img src="/assets/layouts/leviticus/thrivent_choice.png" alt="Thrivent choice donation logo" /></a>
         </div>
       </div>
       <div class=clear"></div>
