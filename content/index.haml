@@ -37,6 +37,18 @@
 
   %div.col_4
     %div.subhead Current Weather
+    %div#wu_weather
+      %span#wu_status Fetching data from Weather Underground...
+      %div#wu_data
+        %div#wu_cur_temp
+        %div
+          Winds are 
+          %span#wu_cur_wind
+      %div
+        %br
+        View more information at
+        %br
+        %a{href: "https://www.wunderground.com/weatherstation/WXDailyHistory.asp?ID=KWANORTH35"} Weather Underground
     :javascript
       var wuxhttp = new XMLHttpRequest();
       wuxhttp.onreadystatechange = function() {
@@ -54,15 +66,3 @@
       };
       wuxhttp.open("GET", "https://api.wunderground.com/api/ce242ff90711ed23/forecast/conditions/q/PWS:KWANORTH35.json", true);
       wuxhttp.send();
-    %div#wu_weather
-      %span#wu_status Fetching data from Weather Underground...
-      %div#wu_data
-        %div#wu_cur_temp
-        %div
-          Winds are 
-          %span#wu_cur_wind
-      %div
-        %br
-        View more information at
-        %br
-        %a{href: "https://www.wunderground.com/weatherstation/WXDailyHistory.asp?ID=KWANORTH35"} Weather Underground
