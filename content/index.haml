@@ -48,7 +48,7 @@
         %br
         View more information at
         %br
-        %a{href: "https://www.wunderground.com/weatherstation/WXDailyHistory.asp?ID=KWANORTH35"} Weather Underground
+        %a{href: "https://www.wunderground.com/weatherstation/WXDailyHistory.asp?ID=KWANORTH35", onclick: "javascript:_paq.push(['trackEvent', 'Footer', 'ClickOutlink', 'weather_underground_widget'])"} Weather Underground
     :javascript
       var wuxhttp = new XMLHttpRequest();
       wuxhttp.onreadystatechange = function() {
