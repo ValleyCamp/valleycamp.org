@@ -36,35 +36,3 @@
       %li
         Updated
         %a{href: "/page/coming_events", onclick:"javascript:_paq.push(['trackEvent', 'Page', 'Navigate', 'page:coming_events'])"} Coming Events
-
-  %div.col_4
-    %div.subhead Current Weather
-    %div#wu_weather
-      %span#wu_status Fetching data from Weather Underground...
-      %div#wu_data
-        %div#wu_cur_temp
-        %div
-          Winds are 
-          %span#wu_cur_wind
-      %div
-        %br
-        View more information at
-        %br
-        %a{href: "https://www.wunderground.com/weatherstation/WXDailyHistory.asp?ID=KWANORTH35", onclick: "javascript:_paq.push(['trackEvent', 'Footer', 'ClickOutlink', 'weather_underground_widget'])"} Weather Underground
-    :javascript
-      var wuxhttp = new XMLHttpRequest();
-      wuxhttp.onreadystatechange = function() {
-        if (wuxhttp.readyState == 4 && wuxhttp.status == 200) {
-          var jsonData = JSON.parse(wuxhttp.responseText);
-          document.getElementById("wu_cur_temp").innerHTML = jsonData["current_observation"]["temp_f"]+"F";
-          document.getElementById("wu_cur_wind").innerHTML = jsonData["current_observation"]["wind_string"];
-          document.getElementById("wu_data").style.display = "block";
-          document.getElementById("wu_status").style.display = "none";
-        } else {
-          document.getElementById("wu_status").innerHTML = "Error getting Weather Underground data.";
-          document.getElementById("wu_status").style.display = "block";
-          document.getElementById("wu_data").style.display = "none";
-        }
-      };
-      wuxhttp.open("GET", "https://api.wunderground.com/api/ce242ff90711ed23/forecast/conditions/q/PWS:KWANORTH35.json", true);
-      wuxhttp.send();
