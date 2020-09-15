@@ -85,5 +85,5 @@ watcher:
 deploy:
   default:
     kind: rsync
-    dst: valleycamp.org:~/public_html
-    options: [ '-gpPrtvz', '--delete-after' ] # delete existing files on server
+    dst: valleycamp.org:~/sites/valleycamp.org
+    options: [ '-gpPrtvz', '--delete-after', '--port=62222' ] # delete existing files on server
