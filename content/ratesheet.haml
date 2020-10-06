@@ -47,6 +47,9 @@
   .facilitybody {
 
   }
+  .printonly {
+    display: none;
+  }
 
   @media print{
     @page { size: auto;  margin: 0mm; }
@@ -95,86 +98,97 @@
       font-size: 5pt;
       padding-top: 30px;
     }
+    .printonly {
+      display: block;
+    }
   }
 
-%div#ratesheet_printbutton
-  %input{type: "button", value: "Click here to Print", onClick: "window.print();"}
+-#%div#ratesheet_printbutton
+  -#%input{type: "button", value: "Click here to Print", onClick: "window.print();"}
 
 %div#ratesheet_container
   %div#headerrow
     %div.pagetitle Valley Camp
-    %div.pagesubtitle Rates for 2020
-    %div.pagesubtitle Find out more at valleycamp.org
+    %div.pagesubtitle Rates for 2020/2021
+    %div.pagesubtitle.printonly Find out more at valleycamp.org
 
-  %div#leftcol
-    %div.facilityheader Teneriffe Lodge Retreat Center
-    %u Overnight (Weekday/Weekend)
-    %br
-    $310 minimum per night which covers your first 10 people
-    %br
-    $31 per person for each additional person over 10
-    %br
-    $12 per person for additional day-use only retreat guests
+  %div
     %br
     %br
-    %u Weekday Day-Use
-    %br
-    $310, Monday-Thursday for groups of up to 36 people
+    Please contact our office at 1-425-888-1852 or
+    %a{:href => "mailto:info@valleycamp.org"}
+      info@valleycamp.org
+    to find out more about our current availability and rates.
 
-    %div.facilityheader Roundhouse
-    $53 per night
-    %br
-    $295 per week
+  -#%div#leftcol
+    -#%div.facilityheader Teneriffe Lodge Retreat Center
+    -#%u Overnight (Weekday/Weekend)
+    -#%br
+    -#$310 minimum per night which covers your first 10 people
+    -#%br
+    -#$31 per person for each additional person over 10
+    -#%br
+    -#$12 per person for additional day-use only retreat guests
+    -#%br
+    -#%br
+    -#%u Weekday Day-Use
+    -#%br
+    -#$310, Monday-Thursday for groups of up to 36 people
 
-    %div.facilityheader Meadow View Cabin
-    $139 minimum per night which covers first 2 people
-    %br
-    $695 per week
-    %br
-    $12 per person per day for additional guests
-    %br
-    %i Special Mid-Week Clergy and Church worker rate: 2 nights for the price of 1 ($139 for 2 nights)
+    -#%div.facilityheader Roundhouse
+    -#$53 per night
+    -#%br
+    -#$295 per week
 
-  %div#rightcol
-    %div.facilityheader RV Sites
-    $36 per night
-    %br
-    $200 per week
-    %br
-    $560 per month
-    %br
-    %br
-    Dry camping with an RV (No utilities, may not be on a level pad) is $25 per night.
+    -#%div.facilityheader Meadow View Cabin
+    -#$139 minimum per night which covers first 2 people
+    -#%br
+    -#$695 per week
+    -#%br
+    -#$12 per person per day for additional guests
+    -#%br
+    -#%i Special Mid-Week Clergy and Church worker rate: 2 nights for the price of 1 ($139 for 2 nights)
 
-    %div.facilityheader Picnic Shelter
-    $120 minimum per day which covers the first 10 people
-    %br
-    $12 per person for each additional person.
-    %br
-    %br
-    Indoor seating capacity is 100 people
+  -#%div#rightcol
+    -#%div.facilityheader RV Sites
+    -#$36 per night
+    -#%br
+    -#$200 per week
+    -#%br
+    -#$560 per month
+    -#%br
+    -#%br
+    -#Dry camping with an RV (No utilities, may not be on a level pad) is $25 per night.
 
-    %div.facilityheader Tenting
-    $25 per night for an individual or family group of up to 5
-    %br
-    $12 per person for larger groups
-  %div#footer_row
-    Weekends are Friday at 3:30pm through Sunday at 3pm
-    %br
-    Weekdays are Sunday at 5pm through Friday at 1pm
-    %br
-    Children under 2 stay free
-    %br
-    %br
-    To hold your chosen dates, a one night deposit is required. All deposits must be received 30 days after a reservation is placed or your date is released.
-    %br
-    %br
-    A refundable cleaning deposit is required before your stay for Teneriffe Lodge ($200) and Meadow View Cabin ($100). If the facility requires a cleaning company to prepare it for the next group your deposit will not be refunded.
+    -#%div.facilityheader Picnic Shelter
+    -#$120 minimum per day which covers the first 10 people
+    -#%br
+    -#$12 per person for each additional person.
+    -#%br
+    -#%br
+    -#Indoor seating capacity is 100 people
 
-  %div#print_footer
+    -#%div.facilityheader Tenting
+    -#$25 per night for an individual or family group of up to 5
+    -#%br
+    -#$12 per person for larger groups
+  -#%div#footer_row
+    -#Weekends are Friday at 3:30pm through Sunday at 3pm
+    -#%br
+    -#Weekdays are Sunday at 5pm through Friday at 1pm
+    -#%br
+    -#Children under 2 stay free
+    -#%br
+    -#%br
+    -#To hold your chosen dates, a one night deposit is required. All deposits must be received 30 days after a reservation is placed or your date is released.
+    -#%br
+    -#%br
+    -#A refundable cleaning deposit is required before your stay for Teneriffe Lodge ($200) and Meadow View Cabin ($100). If the facility requires a cleaning company to prepare it for the next group your deposit will not be refunded.
 
-:javascript
-  var date = new Date();
-  var dateString = date.toDateString();
-  document.getElementById('print_footer').innerHTML = "Printed on "+dateString;
+  -#%div#print_footer
+
+-#:javascript
+  -#var date = new Date();
+  -#var dateString = date.toDateString();
+  -#document.getElementById('print_footer').innerHTML = "Printed on "+dateString;
 
