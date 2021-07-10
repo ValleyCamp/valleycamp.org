@@ -86,6 +86,10 @@ route '/htaccess' do
   '/.htaccess'
 end
 
+route "/server_error_404" do
+  "/server_error_404.html"
+end
+
 route '*' do
   if item.binary?
     # Write item with identifier /foo/ to /foo.ext
