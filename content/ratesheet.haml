@@ -109,77 +109,69 @@
 %div#ratesheet_container
   %div#headerrow
     %div.pagetitle Valley Camp
-    %div.pagesubtitle Rates for 2020/2021
+    %div.pagesubtitle Rates for 2022
     %div.pagesubtitle.printonly Find out more at valleycamp.org
 
-  %div
+  %div#leftcol
+    %div.facilityheader Teneriffe Lodge Retreat Center
+    %u Overnight (Weekday/Weekend)
+    %br
+    $350 minimum per night which covers your first 10 people
+    %br
+    $35 per person for each additional person over 10
+    %br
+    $15 per person for additional day-use only retreat guests
     %br
     %br
-    Please contact our office at 1-425-888-1852 or
-    %a{:href => "mailto:info@valleycamp.org"}
-      info@valleycamp.org
-    to find out more about our current availability and rates.
+    %u Weekday Day-Use
+    %br
+    $350, Monday-Thursday for groups of up to 36 people
 
-  -#%div#leftcol
-    -#%div.facilityheader Teneriffe Lodge Retreat Center
-    -#%u Overnight (Weekday/Weekend)
-    -#%br
-    -#$310 minimum per night which covers your first 10 people
-    -#%br
-    -#$31 per person for each additional person over 10
-    -#%br
-    -#$12 per person for additional day-use only retreat guests
-    -#%br
-    -#%br
-    -#%u Weekday Day-Use
-    -#%br
-    -#$310, Monday-Thursday for groups of up to 36 people
+    %div.facilityheader Roundhouse
+    $53 per night
+    %br
+    $295 per week
 
-    -#%div.facilityheader Roundhouse
-    -#$53 per night
-    -#%br
-    -#$295 per week
+  %div#rightcol
+    %div.facilityheader RV Sites
+    $40 per night
+    %br
+    $240 per week
+    %br
+    $720 per month
+    %br
+    %br
+    Dry camping with an RV (No utilities, may not be on a level pad) is $30 per night.
 
-  -#%div#rightcol
-    -#%div.facilityheader RV Sites
-    -#$36 per night
-    -#%br
-    -#$200 per week
-    -#%br
-    -#$560 per month
-    -#%br
-    -#%br
-    -#Dry camping with an RV (No utilities, may not be on a level pad) is $25 per night.
+    %div.facilityheader Picnic Shelter
+    $150 minimum per day which covers the first 10 people
+    %br
+    $15 per person for each additional person.
+    %br
+    %br
+    Indoor seating capacity is 100 people
 
-    -#%div.facilityheader Picnic Shelter
-    -#$120 minimum per day which covers the first 10 people
-    -#%br
-    -#$12 per person for each additional person.
-    -#%br
-    -#%br
-    -#Indoor seating capacity is 100 people
+    %div.facilityheader Tenting
+    $30 per night for an individual or family group of up to 5
+    %br
+    $15 per person for larger groups
+  %div#footer_row
+    Weekends are Friday at 3:30pm through Sunday at 3pm
+    %br
+    Weekdays are Sunday at 5pm through Friday at 1pm
+    %br
+    Children under 2 stay free
+    %br
+    %br
+    To hold your chosen dates, a one night deposit is required. All deposits must be received 30 days after a reservation is placed or your date is released.
+    %br
+    %br
+    A refundable $200 cleaning deposit is required before your stay for Teneriffe Lodge. If the facility requires a cleaning company to prepare it for the next group your deposit will not be refunded.
 
-    -#%div.facilityheader Tenting
-    -#$25 per night for an individual or family group of up to 5
-    -#%br
-    -#$12 per person for larger groups
-  -#%div#footer_row
-    -#Weekends are Friday at 3:30pm through Sunday at 3pm
-    -#%br
-    -#Weekdays are Sunday at 5pm through Friday at 1pm
-    -#%br
-    -#Children under 2 stay free
-    -#%br
-    -#%br
-    -#To hold your chosen dates, a one night deposit is required. All deposits must be received 30 days after a reservation is placed or your date is released.
-    -#%br
-    -#%br
-    -#A refundable $200 cleaning deposit is required before your stay for Teneriffe Lodge. If the facility requires a cleaning company to prepare it for the next group your deposit will not be refunded.
+  %div#print_footer
 
-  -#%div#print_footer
-
--#:javascript
-  -#var date = new Date();
-  -#var dateString = date.toDateString();
-  -#document.getElementById('print_footer').innerHTML = "Printed on "+dateString;
+:javascript
+  var date = new Date();
+  var dateString = date.toDateString();
+  document.getElementById('print_footer').innerHTML = "Printed on "+dateString;
 
