@@ -62,6 +62,24 @@
           $("#nav_detailed_welcome").removeClass("nav_inactive").addClass("nav_active");
           $(".nav_btn").addClass("btn_inactive");
         }
+
+
+
+        $('.mobile_nav_detailed').each(function() {
+          var n = $(this);
+          n.find("a").each(function(i,e) {
+            if(e.pathname+"/" == window.location.pathname) {
+              var tabs = n.parents('#nav_phonebox').find('ul.tabs').find('li');
+              var tab_next = "#"+e.parentNode.parentNode.parentNode.id;
+              var btn_tab_next = "#btn_"+e.parentNode.parentNode.parentNode.id;
+              var tab_current = tabs.filter('.current').find('a').attr('href');
+              $(tab_current).hide();
+              tabs.removeClass('current');
+              $(btn_tab_next).addClass('current');
+              $(tab_next).show();
+            }
+          });
+        });
       });
 
       /*
@@ -89,12 +107,12 @@
       <div class="col_1" id="nav_phonebox">
         <div id="page_header" class="header center"><span>Navigation</span></div>
         <ul class="tabs center">
-          <li><a href="#tab_explore" onclick="javascript:_paq.push(['trackEvent', 'MobileMenu', 'ActivateSection', 'Explore'])">Explore</a></li>
-          <li><a href="#tab_experience" onclick="javascript:_paq.push(['trackEvent', 'MobileMenu', 'ActivateSection', 'Experience'])">Experience</a></li>
-          <li><a href="#tab_engage" onclick="javascript:_paq.push(['trackEvent', 'MobileMenu', 'ActivateSection', 'Engage'])">Engage</a></li>
+          <li id="btn_tab_explore"><a href="#tab_explore" onclick="javascript:_paq.push(['trackEvent', 'MobileMenu', 'ActivateSection', 'Explore'])">Explore</a></li>
+          <li id="btn_tab_experience"><a href="#tab_experience" onclick="javascript:_paq.push(['trackEvent', 'MobileMenu', 'ActivateSection', 'Experience'])">Experience</a></li>
+          <li id="btn_tab_engage"><a href="#tab_engage" onclick="javascript:_paq.push(['trackEvent', 'MobileMenu', 'ActivateSection', 'Engage'])">Engage</a></li>
         </ul>
 
-        <div id="tab_explore" class="tab-content">
+        <div id="tab_explore" class="tab-content mobile_nav_detailed">
           <ul>
             <li><a href="/explore/teneriffelodge" onclick="javascript:_paq.push(['trackEvent', 'MobileMenu', 'Navigate', 'explore:teneriffelodge'])">Teneriffe Lodge</a></li>
             <li><a href="/explore/roundhouse" onclick="javascript:_paq.push(['trackEvent', 'MobileMenu', 'Navigate', 'explore:roundhouse'])">The Roundhouse</a></li>
@@ -105,7 +123,7 @@
             <li><a href="/explore/area" onclick="javascript:_paq.push(['trackEvent', 'MobileMenu', 'Navigate', 'explore:area'])">Surrounding Area</a></li>
           </ul>
         </div>
-        <div id="tab_experience" class="tab-content">
+        <div id="tab_experience" class="tab-content mobile_nav_detailed">
           <ul>
             <li><a href="/page/planning" onclick="javascript:_paq.push(['trackEvent', 'MobileMenu', 'Navigate', 'page:planning'])">Retreat Planning</a></li>
             <!-- Hidden for now... <li><a href="/page/history">Camp History</a></li> -->
@@ -113,7 +131,7 @@
             <li><a href="/page/links" onclick="javascript:_paq.push(['trackEvent', 'MobileMenu', 'Navigate', 'page:links'])">Other Links</a></li>
           </ul>
         </div>
-        <div id="tab_engage" class="tab-content">
+        <div id="tab_engage" class="tab-content mobile_nav_detailed">
           <ul>
             <li><a href="/page/directions" onclick="javascript:_paq.push(['trackEvent', 'MobileMenu', 'Navigate', 'page:directions'])">Contact Us or Get Directions</a></li>
             <li><a href="/page/donate" onclick="javascript:_paq.push(['trackEvent', 'MobileMenu', 'Navigate', 'page:donate'])">Donate</a></li>
