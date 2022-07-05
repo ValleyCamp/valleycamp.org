@@ -2,6 +2,9 @@
 title: Donate
 ---
 
+-#
+  %div.success Thank you for the donation! <!-- if ?completed=true -->
+
 %p Valley Camp is funded 100% through donations. Every dollar we get goes back into making camp the best possible place for you, our guest.
 %p One-time donations are always very much appreciated, however recurring donations (subscriptions) are especially helpful because they allow us to plan ahead. Imagine not knowing what you were going to get paid next month, and how that would impact your decisions. Subscriptions, even of just a few dollars a month, allow us to plan our spending effectively and are the best way to help us to make improvements.
 %p Not all methods of giving money are equal. As a non-profit we have to be very aware of what percentage of your donation is taken as fees. Listed below are some options, beginning with the ones that get the largest percentage of your donation to us.
@@ -56,35 +59,11 @@ title: Donate
   %p A monthly donation with PayPal is one of the best things you can do to help support Valley Camp, and you can choose any amount you like. Giving just $0.50 per day (That's only $15 per month!) really helps us to budget not only ongoing maintenance, but expansions and improvements as well.
 %div.col_3.center
   :plain
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="blank">
-      <input type="hidden" name="cmd" value="_s-xclick" />
-      <input type="hidden" name="hosted_button_id" value="1322134" />
-      <input type="image" src="/assets/layouts/btn_donateCC_LG.gif" name="submit" alt="" />
-      <!--<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">-->
+    <form action="https://www.paypal.com/donate" method="post" target="_top">
+      <input type="hidden" name="hosted_button_id" value="2PX8VPPNGKCQY" />
+      <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+      <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
     </form>
-    <br />
-    <div style="border: 1px solid black; padding:2px; padding-bottom:5px">
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-      <input type="hidden" name="cmd" value="_xclick-subscriptions">
-      <input type="hidden" name="business" value="W9QKHKZ8YLVFE">
-      <input type="hidden" name="lc" value="US">
-      <input type="hidden" name="item_name" value="Monthly Donation">
-      <input type="hidden" name="item_number" value="donatepage_monthly">
-      <input type="hidden" name="no_note" value="1">
-      <input type="hidden" name="no_shipping" value="2">
-      <input type="hidden" name="src" value="1">
-      <input type="hidden" name="p3" value="1">
-      <input type="hidden" name="t3" value="M">
-      <input type="hidden" name="currency_code" value="USD">
-      <input type="hidden" name="bn" value="PP-SubscriptionsBF:btn_subscribe_LG.gif:NonHosted">
-      <table>
-      <tr><td>Make a monthly donation of:</td></tr>
-      <tr><td>$<input type="text" name="a3" maxlength="10" value="15.00"></td></tr>
-      </table>
-      <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribe_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-      <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-    </form>
-    </div>
     
 %div.clear
 %div.subhead Indirect Donations
