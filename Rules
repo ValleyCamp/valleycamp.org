@@ -1,103 +1,62 @@
 #!/usr/bin/env ruby
 
-# A few helpful tips about the Rules file:
-#
-# * The string given to #compile and #route are matching patterns for
-#   identifiers--not for paths. Therefore, you can’t match on extension.
-#
-# * The order of rules is important: for each item, only the first matching
-#   rule is applied.
-#
-# * Item identifiers start and end with a slash (e.g. “/about/” for the file
-#   “content/about.html”). To select all children, grandchildren, … of an
-#   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
-#   because “*” matches zero or more characters.
-
-compile '/robots' do
-  filter :haml
-end
-route '/robots' do
-  '/robots.txt'
+compile '/robots.txt' do
+  #filter :haml, format: :html5
+  write '/robots.txt'
 end
 
-compile '/sitemap' do
-  filter :haml
-end
-route '/sitemap' do
-  '/sitemap.xml'
+compile '/sitemap.xml' do
+  filter :haml, format: :html5
+  write '/sitemap.xml'
 end
 
-compile '/stylesheet/*' do
+compile '/stylesheet.sass' do
   filter :sass
+  write '/style.css'
 end
 
-compile '/htaccess' do
-  # Do nothing to it, it's a plain text file!
+compile '/htaccess.txt' do
+  write '/.htaccess'
 end
 
-# compile '/assets/*' do
-  # Nothing
-# end
-
-compile '*' do
-  if item.binary?
-    # don’t filter binary items
-  else
-    case item[:extension]
-      when 'md'
-        filter :kramdown
-      when 'haml'
-        filter :haml
-      when 'erb'
-        filter :erb
-    end
-
-    #layout 'default'
-    layout 'leviticus'
-  end
+compile '/*.haml' do
+  filter :haml, format: :html5
+  layout '/leviticus.*'
+  write ext: '.html'
 end
 
-route '/stylesheet/' do
-  '/style.css'
+compile '/**/*.haml' do
+  filter :haml, format: :html5
+  layout '/leviticus.*'
+  write item.identifier.without_ext + '/index.html'
 end
 
-route "/static/images/*/" do
-  "/images/" + File.basename(item.identifier)
+compile '/**/*.html' do
+  layout '/leviticus.*'
+  write item.identifier.without_ext + '/index.html'
 end
 
-route "/assets/favicon/*" do
-  "/" + File.basename(item.identifier)
+#passthrough '/assets/images/**/*'
+#compile '/assets/images/**/*' do
+  #write "/images/" + File.basename(item.identifier)
+#end
+
+#compile "/assets/favicon/*" do
+  #write "/" + File.basename(item.identifier)
+#end
+
+compile '/assets/kickstart/**/*' do
+  write '/' + item.identifier.components.drop(2).join('/')
 end
 
-route '/assets/*' do
- # If it's a kickstart file kick it up to the root css/js folders
-  if item.identifier.chop =~ /assets\/kickstart/
-    item.identifier.chop.sub!("/assets/kickstart", "")
-  else
-    item.identifier.chop
-  end
+
+compile '/assets/favicon/*' do
+  write '/' + item.identifier.components[-1].to_s
 end
 
-route '/gallery_temp' do
-  '/gallery/index.html'
+# The remaining items in the assets folder can just get copied over directly
+compile '/assets/**/*' do
+  write item.identifier
 end
 
-route '/htaccess' do
-  '/.htaccess'
-end
-
-route "/server_error_404" do
-  "/server_error_404.html"
-end
-
-route '*' do
-  if item.binary?
-    # Write item with identifier /foo/ to /foo.ext
-    item.identifier.chop + '.' + item[:extension]
-  else
-    # Write item with identifier /foo/ to /foo/index.html
-    item.identifier + 'index.html'
-  end
-end
-
-layout '*', :erb
+layout '/**/*', :erb
