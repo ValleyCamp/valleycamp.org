@@ -19,7 +19,7 @@ compile '/htaccess.txt' do
   write '/.htaccess'
 end
 
-compile '/*.haml' do
+compile '/{index,server_error_404}.haml' do
   filter :haml, format: :html5
   layout '/leviticus.*'
   write ext: '.html'
