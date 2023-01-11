@@ -55,16 +55,23 @@
     @page { size: auto;  margin: 0mm; }
 
     #logo, #nav_phonebox, #nav_toplevel, #nav_mustache, #nav_detailed_container, #nav_social_bar{ display: none; }
+    #footer, #footer_clear { display: none; }
 
     body {
+      background-color: #ffffff !important;
+      color: #000000; 
+      margin: 0;
       font: 13pt Georgia, "Times New Roman", Times, serif;
       line-height: 1.3;
-      background: #fff !important;
-      color: #000; 
     }
 
     body * {
       visibility: hidden;
+    }
+    #main_container {
+      min-height: 0px !important;
+      page-break-after: avoid;
+      background-color: #ffffff !important;
     }
     #ratesheet_container {
       visibility: visible; 
@@ -75,6 +82,7 @@
       overflow:hidden;
       margin: 0;
       padding: 1cm;
+      background-color: #ffffff !important;
     }
     #ratesheet_container *{
       visibility: visible;
@@ -87,7 +95,9 @@
 
     }
     .facilityheader {
-
+      font-size: 18pt;
+      font-weight: bold;
+      margin-top: 3.50rem;
     }
     .facilitybody {
 
