@@ -2,8 +2,9 @@
 source "https://rubygems.org"
 
 gem 'nanoc', '~> 4.12'
-gem 'guard-nanoc'
-gem 'guard-bundler'
+group 'nanoc' do
+  gem 'nanoc-live'
+end
 gem 'adsf'
 gem 'haml', '~> 5.1.2'
 gem 'kramdown'
